@@ -1,4 +1,4 @@
-from sou.models import UploadProduct,CreateUser,Client
+from sou.models import CreateUser
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms  
@@ -10,10 +10,7 @@ PAYMENT_CHOICES=(('S', 'Stripe'),
 
                 )
 
-class UploadProductForm(forms.ModelForm):
-    class Meta:
-        model=UploadProduct
-        fields=['name','description','price','category','model','sku','photo']
+
 
 class ClientForm(forms.Form):
      shipping_address=forms.CharField(required=True, widget=forms.TextInput(attrs={
