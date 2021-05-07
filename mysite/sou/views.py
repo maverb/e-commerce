@@ -119,7 +119,7 @@ def remove_from_cart(request,slug):
 #just a regular login view
 @csrf_exempt
 def loginPage(request):
-  ur=user.request
+  ur=request.user
   context={
   }
   if request.method=='POST':
